@@ -1,0 +1,6 @@
+com\example\RegistrationApp\RegistrationAppApplication.class
+com\example\RegistrationApp\Controller\RegistrationController.class
+com\example\RegistrationApp\Services\UserRegistrationService.class
+com\example\RegistrationApp\Entity\UserDetailsTbl.class
+com\example\RegistrationApp\Swagger\SwaggerConfig.class
+com\example\RegistrationApp\Repositories\UserRegistrationRepo.class
