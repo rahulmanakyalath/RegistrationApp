@@ -2,20 +2,21 @@ package com.example.RegistrationApp.Entity;
 
 import javax.persistence.*;
 
-@Entity(name = "USERTBL")
+@Entity(name = "usertbl")
+@Table(name = "usertbl", schema = "public")
 public class UserDetailsTbl {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID")
+    @Column(name = "id")
     private Long id;
-    @Column(name = "NAME")
+    @Column(name = "name")
     private String name;
-    @Column(name = "EMAILID")
+    @Column(name = "emailid")
     private String emailId;
-    @Column(name = "PASSWORD")
+    @Column(name = "password")
     private String password;
-    @Column(name = "GENDER")
+    @Column(name = "gender")
     private String gender;
 
     public UserDetailsTbl() {

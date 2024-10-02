@@ -12,14 +12,14 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public interface UserRegistrationRepo extends JpaRepository<UserDetailsTbl, Long> {
 
-    @Query(value = "SELECT COUNT(*) FROM USERTBL WHERE USERTBL.NAME = ?1",nativeQuery = true)
+    @Query(value = "SELECT COUNT(*) FROM usertbl WHERE usertbl.NAME = ?1",nativeQuery = true)
     int IsExsistingUser(String username);
 
 
-    @Query(value = "SELECT COUNT(*) FROM USERTBL WHERE USERTBL.EMAILID = ?1 AND USERTBL.PASSWORD = ?2",nativeQuery = true)
+    @Query(value = "SELECT COUNT(*) FROM usertbl WHERE usertbl.EMAILID = ?1 AND usertbl.PASSWORD = ?2",nativeQuery = true)
     int findAllByEmailAndPass(String emailid,String password);
 
-    @Query(value = "SELECT * FROM USERTBL WHERE USERTBL.EMAILID = ?1",nativeQuery = true)
+    @Query(value = "SELECT * FROM usertbl WHERE usertbl.EMAILID = ?1",nativeQuery = true)
     UserDetailsTbl findByEmailId(String emailid);
 
 }
